@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <title>Validation Form</title>
+    <style>
+        body{
+            font-family: arial, sans-serif;
+        }
+        div {
+            margin-bottom: 30px;
+        }
+        fieldset {
+            border: 0;
+            padding: 30px;
+        }
+        label {
+            font-size: 20px;          
+        }
+          
+        input,
+        textarea {
+            border: 0;          
+            border-bottom: 1px solid gray;          
+            padding: 10px 0;          
+            width: 200px;
+        }
+        select {
+            background: transparent;          
+            border: 0;          
+            border-radius: 0;          
+            border-bottom: 1px solid gray;          
+            box-shadow: none;  
+            color: #666;          
+            -webkit-appearance: none;
+            padding: 10px 0;          
+            width: 200px;
+        }
+        .select-wrapper {
+
+            position: relative;
+          
+            width: 200px;
+          
+          }
+          
+          .select-wrapper:after {
+              content: '<>';
+              color: #666;          
+              font-size: 14px;          
+              top: 8px;          
+              right: 0;          
+              transform: rotate(90deg);          
+              position: absolute;          
+              z-index: -1;
+            }
+
+    </style>
+</head>
+
+<body>
+    <form action='URL_to_send_form_data' method='post'>
+   <!--<h1>placeholder='That'</h1>-->
+   <fieldset>
+    <div>
+        <label for='First_name'>First name:</label><br/>
+        <input type='text' name='Firstname' id='First_name' placeholder='Your First Name' required/>
+    </div>
+    <div>
+        <label for='Last_name'>Last name:</label><br/>
+        <input type='text' name='Lastname' id='Last_name'placeholder='Your Last Name' required/>
+    </div>
+    <label for='country'>'Country:'</label>
+    <div class='select-wrapper'>
+        <select id='country'>
+            <option value='england'>England</option>
+            <option value='scotland'>Scotland</option>
+            <option value='ireland'>Ireland</option>
+            <option value='wales'>Wales</option>
+        </select>
+    </div>
+    <label for="message">Message:</label><br/>
+    <textarea id="message" rows="5" cols="20" placeholder="Your message" required></textarea>
+    <br/><br/>
+    <button type="submit">Submit</button>
+   </fieldset>
+   </form>
+</body>
+</html>
