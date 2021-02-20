@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Property for Sale in London</title>
+    <style>
+        *{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align:center;
+            background:rgb(198, 204, 211);
+        }
+        fieldset{
+            padding:0;
+            margin:0;
+            border:transparent;
+        }
+        select{
+            border:2px solid black;
+            width:auto;
+            background:white;
+        }
+        input{
+            border:2px solid black;
+            background:white;
+        }
+        fieldset>div{
+            display:flex;
+            flex-wrap:wrap;
+            border:2.5px solid black;
+            margin-bottom:10px;
+            background:none;
+        }
+        h1{
+            font-size:45px;
+            color:mediumblue;
+        }
+        h3{
+            background:lightblue;
+            border:2.5px solid black;
+            text-align:center;
+            margin-bottom:0;
+        }
+        label{
+            display:block;
+            font-size: 16px;
+            color:mediumblue;
+            margin-bottom:2px;
+            font-weight:bold;
+        }
+        label span{
+            margin:0px;
+            color:red;
+        }
+        button{
+            border: 2.5px solid black;
+            background:rgb(6, 29, 235);
+            color:black;
+            text-align: center;
+            text-transform:uppercase;
+            width:auto;
+        }
+        .checkbox input{
+            border:2.5px solid black;
+         }
+        .search-area>div{
+            text-align:center;
+            padding-left:140px;
+            padding-bottom:7px;
+        }
+        .home-details>div{
+            text-align:center;padding:10px;
+            padding-left:75px;
+            margin:0;
+            border-bottom:0;
+        }
+        .checkbox>div{
+            text-align:center;
+            margin:0;
+            padding-left:150px;
+        }
+        
+          
+    </style>
+</head>
+
+<body>
+<h1>~London Real Estate~</h1>
+<form action='url_to_send_form_data' method='post'>
+<fieldset>
+<h3>Search Area</h3>
+<div class ='search-area'>
+        <div>
+        <label for='city'>City:<span>*</span></label>
+        <input id='city' type='text' name='city' placeholder='Search by City' required />
+    </div>
+    <div>
+        <label for="search_radius">Search Radius:<span>*</span></label>
+        <div class='select-wrapper'>
+            <select id='search_radius'>
+                <option value='any'>Any</option>
+                <option value='10km'>10km</option>
+                <option value='20km'>20km</option>
+                <option value='30km'>30km</option>
+                <option value='40km'>40km</option>
+                <option value='50km'>50km</option>
+                <option value='75km +'>75+ km</option>
+            </select>
+        </div>
+    </div>
+    <div class='search-radius'>
+        <label for='price-range'>Price Range</label>
+        <div class='select-wrapper'>
+            <select id='price-range'>
+                <option value='amy'>Any</option>
+                <option value='$20,000-$50,000'>$20,000-$50,000</option>
+                <option value='$50,000-$75,000'>$50,000-$75,000</option>
+                <option value='$75,000-$125,000'>$75,000-$125,000</option>
+                <option value='$125,000-$175,000'>$125,000-$175,000</option>
+                <option value='$175,000-$250,000'>$175,000-$250,000</option>
+                <option value='$250,000-$350,000'>$250,000-$350,000</option>
+                <option value='$350,000 and Up'>$350,000 and Up</option>
+            </select>
+        </div>
+    </div>
+</div>
+<h3>Home Details</h3>
+<div class='home-details'>
+        <div>
+        <label for="home_type">Home Type:</label>
+        <div class='select-wrapper'>
+            <select id='home-type'>
+                <option value='any'>Any</option>
+                <option value='houses'>Houses</option>
+                <option value='condo'>Condo/Co-Op</option>
+                <option value='apartment'>Apartment</option>
+                <option value='town_home'>Town Homes</option>
+                <option value='multi-family'>Multi-Family</option>
+                <option value='mobile-home'>Mobile Homes</option>
+            </select>
+        </div>
+    </div>
+    <div>
+        <label for="bedrooms">Bedrooms:</label>
+        <div class='select-wrapper'>
+            <select id='bedrooms'>
+                <option value='any'>Any</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5+">5+</option>                
+            </select>
+        </div>
+    </div>
+    <div>
+        <label for='bathrooms'>Bathrooms:</label>
+        <div class='select-wrapper'>
+            <select id='bathrooms'>
+                <option value='any'>Any</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4+">4+</option>
+            </select>
+        </div>
+    </div>
+    <div>
+        <label for='square_foot'>Square Foot:</label>
+        <div class='select-wrapper'>
+            <select id='square_foot'>
+                <option value='any'>Any</option>
+                <option value='500-1,000sqft'>500 - 1,200sqft</option>
+                <option value='1,200-1,800SqFt'>1,200 - 1,800sqft</option>
+                <option value='1,800-2,400'>1,800 - 2,400sqft</option>
+                <option value='2,400-3,000'>2,400 - 3,000sqft</option>
+                <option value='3,000+ sqft'>3,000+ sqft</option>
+            </select>
+        </div>
+    </div>
+    <div>
+        <label for='lot-area'>Lot Area</label>
+        <div class='select-wrapper'>
+            <select id='lot-area'>
+                <option value='any'>Any</option>
+                <option value='1/4 - 1 Acre'>1/4 - 1 Acre</option>
+                <option value='1 - 3 Acres'>1 - 3 Acres</option>
+                <option value='3 - 5 Acres'>3 - 5 Acres</option>
+                <option value='5 - 10 Acres'>5 - 10 Acres</option>
+                <option value='10+ Acres'>10+ Acres</option>
+            </select>
+        </div>
+    </div>
+</div>
+<div class='checkbox'>    
+<div>
+    <input id='Attic' type='radio' name='Attic' value='Attic'/>
+    <label for='Attic'>Attic</label>        
+</div>
+<div>
+    <input id='basement' type='radio' name='basement'value='basement'/>
+    <label for='basement'>Basement</label>
+</div>
+<div>
+    <input id='for-rent' type='radio' name='for-rent' value=='for-rent'/>
+    <label for='for-rent'>For Rent</label>
+</div>
+<div>
+    <input id='for-sale' type='radio' name='for-sale' value='for-sale'/>
+    <label for='for-sale'>For Sale</label>
+</div>
+</div>
+</div>
+<button type='submit'>Search</button>
+</fieldset>
+</form>
+</body>
+</html>

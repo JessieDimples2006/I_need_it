@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <title>Clothing</title>
+    <style>
+        header,
+        nav,
+        section,
+        footer {
+            background: rgb(16, 26, 180);
+            border-radius: 5px;
+            color: rgb(120, 236, 12);
+            font-family: arial, serif;
+            font-size: 25px;
+            text-align: center;
+        }
+        
+        header:before,
+        nav:before,
+        footer:before {
+            content: '<';
+        }
+        
+        header:after,
+        nav:after,
+        footer:after {
+            content: '>';
+        }
+        
+        header,
+        nav,
+        section,
+        footer {
+            border: 2px rgb(49, 199, 245);
+            padding: 20x;
+            margin-bottom: 25px;
+        }
+        
+        .products {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+        }
+        
+        .products div {
+            border: 2px solid rgb(27, 236, 9);
+            padding: 30px;
+            margin: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>header</header>
+    <nav>nav</nav>
+    <section>Image Carousel</section>
+    <section class="products">
+        <div>Product 1</div>
+        <div>Product 2</div>
+        <div>Product 3</div>
+        <div>Product 4</div>
+    </section>
+    <footer>footer</footer>
+</body>
+
+</html>
